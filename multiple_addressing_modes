@@ -1,3 +1,5 @@
+;Multiple addressing modes with Annotation
+
 section .data
     num1 db 10
     num2 db 20
