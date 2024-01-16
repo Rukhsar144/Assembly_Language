@@ -1,0 +1,75 @@
+section .data
+    num1 db 10
+    num2 db 20
+    num3 db 30
+
+section .bss
+    result resb 1
+
+section .text
+    global _start
+
+_start:
+    ; Immediate Addressing
+    mov al, 10 ; Move immediate value 10 to AL
+
+    ; Register Addressing
+    mov ah, num1 ; Move num1 to AH
+    mov bl, num2 ; Move num2 to BL
+    mov cl, num3 ; Move num3 to CL
+
+    ; Memory Addressing
+    mov [result], al ; Store AL in memory location result
+    mov [result], ah ; Store AH in memory location result
+    mov [result], bl ; Store BL in memory location result
+    mov [result], cl ; Store CL in memory location result
+
+    ; Indirect Memory Addressing
+    mov al, [num1] ; Load AL with the value stored in num1
+    mov ah, [num2] ; Load AH with the value stored in num2
+    mov bl, [num3] ; Load BL with the value stored in num3
+
+    ; Based Indexed Addressing
+    mov al, [num1 + 1] ; Load AL with the value stored in num1 + 1
+    mov ah, [num2 + 1] ; Load AH with the value stored in num2 + 1
+    mov bl, [num3 + 1] ; Load BL with the value stored in num3 + 1
+
+    ; Based and Indexed Addressing
+    mov al, [num1 + num2] ; Load AL with the value stored in num1 + num2
+    mov ah, [num2 + num3] ; Load AH with the value stored in num2 + num3
+    mov bl, [num3 + num1] ; Load BL with the value stored in num3 + num1
+
+    ; Based, Indexed, and Indirect Addressing
+    mov al, [num1 + num2 + 1] ; Load AL with the value stored in num1 + num2 + 1
+    mov ah, [num2 + num3 + 1] ; Load AH with the value stored in num2 + num3 + 1
+    mov bl, [num3 + num1 + 1] ; Load BL with the value stored in num3 + num1 + 1
+
+    ; Based, Indexed, and Indirect Addressing with Displacement
+    mov al, [num1 + num2 + 2] ; Load AL with the value stored in num1 + num2 + 2
+    mov ah, [num2 + num3 + 2] ; Load AH with the value stored in num2 + num3 + 2
+    mov bl, [num3 + num1 + 2] ; Load BL with the value stored in num3 + num1 + 2
+
+    ; Based, Indexed, and Indirect Addressing with Displacement and Scale
+    mov al, [num1 + num2 * 2 + 3] ; Load AL with the value stored in num1 + num2 * 2 + 3
+    mov ah, [num2 + num3 * 2 + 3] ; Load AH with the value stored in num2 + num3 * 2 + 3
+    mov bl, [num3 + num1 * 2 + 3] ; Load BL with the value stored in num3 + num1 * 2 + 3
+
+    ; Based, Indexed, and Indirect Addressing with Displacement, Scale, and Offset
+    mov al, [num1 + num2 * 4 + 5] ; Load AL with the value stored in num1 + num2 * 4 + 5
+    mov ah, [num2 + num3 * 4 + 5] ; Load AH with the value stored in num2 + num3 * 4 + 5
+    mov bl, [num3 + num1 * 4 + 5] ; Load BL with the value stored in num3 + num1 * 4 + 5
+
+    ; Based, Indexed, and Indirect Addressing with Displacement, Scale, Offset, and Segment
+    mov al, [num1 + num2 * 8 + 7] ; Load AL with the value stored in num1 + num2 * 8 + 7
+    mov ah, [num2 + num3 * 8 + 7] ; Load AH with the value stored in num2 + num3 * 8 + 7
+    mov bl, [num3 + num1 * 8 + 7] ; Load BL with the value stored in num3 + num1 * 8 + 7
+
+    ; Based, Indexed, and Indirect Addressing with Displacement, Scale, Offset, Segment, and Base
+    mov al, [num1 + num2 * 16 + 9] ; Load AL with the value stored in num1 + num2 * 16 + 9
+    mov ah, [num2 + num3 * 16 + 9] ; Load AH with the value stored in num2 + num3 * 16 + 9
+    mov bl, [num3 + num1 * 16 + 9] ; Load BL with the value stored in num3 + num1 * 16 + 9
+
+    ; Based, Indexed, and Indirect Addressing with Displacement, Scale, Offset, Segment, Base, and Index
+    mov al, [num1 + num2 * 32 + 11] ; Load AL with the value stored in num1 + num2 * 32 + 11
+    mov ah, [num2 + num3 * 32 + 11] ; Load AH with the value stored in num2 + num3 * 32 + 11
+    mov bl, [num3 + num1 * 32 + 11] ; Load BL with the
