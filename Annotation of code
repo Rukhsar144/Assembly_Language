@@ -1,7 +1,1 @@
-#In the program:
-Immediate addressing mode is used to move the immediate value 10 to the AL register.
-Register addressing mode is used to move the values of num1, num2, and num3 to the AH, BL, and CL registers, respectively.
-Memory addressing mode is used to store the value of AL in the memory location result.
-Indirect memory addressing mode is used to load the value stored in num1 into the AL register.
-Based indexed addressing mode is used to load the value stored in num1 + 1 into the AL register.
-Based, indexed, and indirect addressing mode is used to load the value stored in num1 + num2 into the AL register
+
