@@ -56,17 +56,17 @@ _start:
     mov ah, [num2 + num3 * 2 + 3] ; Load AH with the value stored in num2 + num3 * 2 + 3
     mov bl, [num3 + num1 * 2 + 3] ; Load BL with the value stored in num3 + num1 * 2 + 3
 
-    ; Based, Indexed, and Indirect Addressing with Displacement, Scale, and Offset
+    ; Based, Indexed, and Indirect Addressing with Displacement, Scale, Offset, Segment, Base, and Index
     mov al, [num1 + num2 * 4 + 5] ; Load AL with the value stored in num1 + num2 * 4 + 5
     mov ah, [num2 + num3 * 4 + 5] ; Load AH with the value stored in num2 + num3 * 4 + 5
     mov bl, [num3 + num1 * 4 + 5] ; Load BL with the value stored in num3 + num1 * 4 + 5
 
-    ; Based, Indexed, and Indirect Addressing with Displacement, Scale, Offset, and Segment
+    ; Based, Indexed, and Indirect Addressing with Displacement, Scale, Offset, Segment, Base, and Index
     mov al, [num1 + num2 * 8 + 7] ; Load AL with the value stored in num1 + num2 * 8 + 7
     mov ah, [num2 + num3 * 8 + 7] ; Load AH with the value stored in num2 + num3 * 8 + 7
     mov bl, [num3 + num1 * 8 + 7] ; Load BL with the value stored in num3 + num1 * 8 + 7
 
-    ; Based, Indexed, and Indirect Addressing with Displacement, Scale, Offset, Segment, and Base
+    ; Based, Indexed, and Indirect Addressing with Displacement, Scale, Offset, Segment, Base, and Index
     mov al, [num1 + num2 * 16 + 9] ; Load AL with the value stored in num1 + num2 * 16 + 9
     mov ah, [num2 + num3 * 16 + 9] ; Load AH with the value stored in num2 + num3 * 16 + 9
     mov bl, [num3 + num1 * 16 + 9] ; Load BL with the value stored in num3 + num1 * 16 + 9
@@ -74,4 +74,4 @@ _start:
     ; Based, Indexed, and Indirect Addressing with Displacement, Scale, Offset, Segment, Base, and Index
     mov al, [num1 + num2 * 32 + 11] ; Load AL with the value stored in num1 + num2 * 32 + 11
     mov ah, [num2 + num3 * 32 + 11] ; Load AH with the value stored in num2 + num3 * 32 + 11
-    mov bl, [num3 + num1 * 32 + 11] ; Load BL with the
+    mov bl, [num3 + num1 * 32 + 11] ; Load BL with the value stored in num3 + num1 * 32 + 11
